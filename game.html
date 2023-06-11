@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="img/poro.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lolzy</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <header>
+        <button class="return-button" onclick="window.location.href='mp.html'">Return to Main Menu</button>
+        <center>
+            <img src="img/lolzy_logo.png" alt="lolquiz_logo" id="logo">
+        </center>
+    </header>
+    <h1></h1>
+    <form id="form">
+        <div style="position: relative;">
+            <input type="text" id="answer" placeholder="Guess the champion name..." autocomplete="off" style="color: white;">
+            <div id="autocomplete-list"></div>
+        </div>
+        <button id="submit">Submit</button>
+    </form>
+    <table id="results">
+        <thead>
+            <tr>
+                <th>Champion</th>
+                <th>Gender</th>
+                <th>Positions</th>
+                <th>Species</th>
+                <th>Resource</th>
+                <th>Range Type</th>
+                <th>Regions</th>
+                <th>Release Year</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <!-- Change the ID attribute of the img element -->
+    <img id="champion-image" class="champion-image" src="" alt="">
+    <div id="champion-name"></div>
+
+    <button id="play-again" style="display:none;">Play Again</button>
+
+    <script src="game.js"></script>
+</body>
+
+</html>

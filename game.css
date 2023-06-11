@@ -1,0 +1,441 @@
+html {
+    background-image: url('images/mp\ slika.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+  }
+  
+  #logo {
+    max-width: 350px;
+    height: auto;
+    margin-bottom: -15px;
+    margin-top: 169px;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 469px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+  }
+  
+  input {
+    width: 100%;
+    padding: 15px;
+    margin-right: 100px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+    background-color: #3ba6a6;
+  }
+  
+  input:focus {
+    border-color: #555;
+  } 
+
+  #answer::placeholder {
+    color: white;
+  }
+  
+  #answer:-ms-input-placeholder {
+    color: white;
+  }
+  
+  #answer::-ms-input-placeholder {
+    color: white;
+  }
+  
+  
+  button {
+    padding: 15px 40px;
+    font-size: 16px;
+    margin-left: 15px;
+    background-color: #4a67d7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #3ba6a6;
+    transform: scale(1.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .box {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .correct {
+    background-color: #60d394;
+    border-color: #000000;
+  }
+  
+  .incorrect {
+    background-color: #ef233c;
+    border-color: #000000;
+  }
+  
+  .box-value {
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: 'BeaufortforLOL';
+    src: url('font/BeaufortforLOL-Regular.woff2') format('woff2'),
+      url('font/BeaufortforLOL-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'BeaufortforLOL', sans-serif;
+  }
+  
+  #autocomplete-list {
+    position: absolute;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 100%;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #autocomplete-list div {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #autocomplete-list div:hover {
+    background-color: #f1f1f1;
+  }
+  
+  #autocomplete-list div:last-child {
+    border-bottom: none;
+  }
+
+  .return-button {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    background-color: #4a67d7;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.return-button:hover {
+    background-color: #3ba6a6;
+    transform: scale(1.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+  
+  .partial {
+    background-color: #f9b208;
+    border-color: #000000;
+  }
+  
+  .criteria-box {
+    background-color: #3ba6a6;
+  }
+  
+  /* Add the new styles for the criteria boxes */
+  .criteria-box {
+    border: 3px solid black;
+    /* Add a black outline */
+    padding: 5px 10px;
+    /* Set the size of the boxes, adjust these values as needed */
+    margin-right: 10px;
+    /* Set the gap between the boxes, adjust this value as needed */
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th,
+  td {
+    border: 2px solid #000000;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #3ba6a6;
+    font-weight: bold;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .champion-image {
+    width: 700px;
+    height: 400px;
+    object-fit: cover;
+    display: none;
+    /* Add the following lines to style the border */
+    border: 10px solid #000000;
+    /* Adjust the width (3px) and color (#000000) as desired */
+    border-radius: 5px;
+    /* Adjust the value to change the roundness of the border */
+  }
+  
+  /* Add these new rules */
+  
+  .name-cell {
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+  }
+  
+  .champion-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  td {
+    width: 66px;
+    height: 66px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+  }
+  
+  .table-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-weight: bold;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-line;
+  }
+  
+  table td {
+    border: 4px solid #000;
+  }
+  
+  .table-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .text-cell .table-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    /* Add this line to stack words vertically */
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor: default;
+    box-shadow: inset 0 0 4px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .word {
+    display: block;
+    white-space: nowrap;
+    word-break: keep-all;
+  }
+  
+  .word-per-row {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    /* You can keep or remove other styles depending on your design preference */
+  }
+  
+  .word-wrap {
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  
+  .autocomplete-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px 4px;
+  }
+  
+  .autocomplete-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 4px;
+  }
+  
+  .autocomplete-name {
+    display: inline;
+  }
+  
+  /* Search list container */
+  .autocomplete-list {
+    background-color: #000000;
+    /* Change the background color of the search list container */
+  }
+  
+  .autocomplete-item {
+    border: none;
+  }
+  
+  /* Search list items on hover */
+  .autocomplete-item:hover {
+    background-color: #000000;
+    /* Change the background color of the search list items when hovered */
+    cursor: pointer;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  .champion-name {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: -3px -3px 0 #000000, 3px -3px 0 #000000, -3px 3px 0 #000000, 3px 3px 0 #000000 !important;
+  }
+  
+  #leaderboard {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    z-index: 100;
+    font-size: 20px;
+    /* Change the value to adjust the font size */
+  }
+  
+  
+  #leaderboard>div {
+    background-color: #5CD5CE;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 4px;
+    border: 2px solid black;
+  }
+  
+  #leaderboard span {
+    font-weight: bold;
+  }
+  
+  
+  
+  #results {
+    /* Add this line to create a gap below the table */
+    margin-bottom: 50px;
+    /* Adjust the value as desired */
+  }
+  
+  #play-again {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4a67d7;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  #play-again:hover {
+    background-color: #3ba6a6;
+    transform: scale(1.1);
+  }
+  
+  
+  /* The rest of your CSS remains the same */
